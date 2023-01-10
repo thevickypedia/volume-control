@@ -1,4 +1,7 @@
+"""OS-agnostic module to control system volume using built-in functions."""
+
 import logging
+import math
 import os
 import platform
 from typing import NoReturn
@@ -52,7 +55,7 @@ def pyvolume(level: int, debug: bool = False, logger: logging.Logger = None) -> 
         logger.warning("'%d' bad value received. volume level cannot be negative, defaulting to 0" % level)
         level = 0
     if _SYSTEM == "Darwin":
-        result = os.system(f'osascript -e "set Volume {round((8 * level) / 100)}"')
+        result = os.system('osascript -e "set Volume %d"' % math.ceil((8 * level) / 100))
         if debug is False:
             return
         if result == 0:
@@ -67,7 +70,7 @@ def pyvolume(level: int, debug: bool = False, logger: logging.Logger = None) -> 
         else:
             logger.info("System volume has been set to %s%s" % (level, "%")) if debug else None
     elif _SYSTEM == "Linux":
-        result = os.system(f"amixer sset 'Master' {level}% /dev/null 2>&1")
+        result = os.system("amixer sset 'Master' %d%s /dev/null 2>&1" % (level, "%"))
         if debug is False:
             return
         if result == 0:
