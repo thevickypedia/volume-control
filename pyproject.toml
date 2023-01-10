@@ -1,6 +1,6 @@
 [project]
 name = "volume-control"
-version = "0.0.0b"
+dynamic = ["version"]
 description = "Light weight OS-agnostic volume controller for python"
 readme = "README.md"
 authors = [{ name = "Vignesh Sivanandha Rao", email = "svignesh1793@gmail.com" }]
@@ -10,6 +10,12 @@ classifiers = [
 ]
 keywords = ["pyvolume", "volume-controller"]
 requires-python = ">=3"
+
+[tool.setuptools]
+packages = ["pyvolume"]
+
+[tool.setuptools.dynamic]
+version = {attr = "pynotification.version"}
 
 [build-system]
 requires      = ["setuptools", "wheel"]
