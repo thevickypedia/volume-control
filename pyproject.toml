@@ -4,9 +4,15 @@ dynamic = ["version"]
 description = "Light weight OS-agnostic volume controller for python"
 readme = "README.md"
 authors = [{ name = "Vignesh Sivanandha Rao", email = "svignesh1793@gmail.com" }]
+license = { file = "LICENSE" }
 classifiers = [
+    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
-    "Development Status :: 1 - Planning"
+    "Development Status :: 5 - Production/Stable",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Terminals :: Terminal Emulators/X Terminals"
 ]
 keywords = ["pyvolume", "volume-controller"]
 requires-python = ">=3"
@@ -15,8 +21,15 @@ requires-python = ">=3"
 packages = ["pyvolume"]
 
 [tool.setuptools.dynamic]
-version = {attr = "pynotification.version"}
+version = {attr = "pyvolume.version"}
 
 [build-system]
 requires      = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/thevickypedia/volume-control"
+Docs = "https://thevickypedia.github.io/volume-control"
+Source = "https://github.com/thevickypedia/volume-control"
+"Bug Tracker" = "https://github.com/thevickypedia/volume-control/issues"
+"Release Notes" = "https://github.com/thevickypedia/volume-control/blob/main/release_notes.rst"
