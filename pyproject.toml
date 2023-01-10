@@ -1,0 +1,16 @@
+[project]
+name = "volume-control"
+version = "0.0.0b"
+description = "Light weight OS-agnostic volume controller for python"
+readme = "README.md"
+authors = [{ name = "Vignesh Sivanandha Rao", email = "svignesh1793@gmail.com" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Development Status :: 1 - Planning"
+]
+keywords = ["pyvolume", "volume-controller"]
+requires-python = ">=3"
+
+[build-system]
+requires      = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"

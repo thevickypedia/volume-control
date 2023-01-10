@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>Volume Control &#8212; Volume Control  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css" />
+    
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to Volume Control’s documentation!" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Volume Control’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Volume Control  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Volume Control</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <p><strong>Platform Supported</strong></p>
+<p><img alt="Generic badge" src="https://img.shields.io/badge/Platform-Linux%7CMacOS%7CWindows-1f425f.svg" /></p>
+<p><strong>Deployments</strong></p>
+<p><a class="reference external" href="https://github.com/thevickypedia/volume-control/actions/workflows/pages/pages-build-deployment"><img alt="pages-build-deployment" src="https://github.com/thevickypedia/volume-control/actions/workflows/pages/pages-build-deployment/badge.svg" /></a>
+<a class="reference external" href="https://github.com/thevickypedia/volume-control/actions/workflows/python-publish.yml"><img alt="pypi-publish" src="https://github.com/thevickypedia/volume-control/actions/workflows/python-publish.yml/badge.svg" /></a></p>
+<section id="volume-control">
+<h1>Volume Control<a class="headerlink" href="#volume-control" title="Permalink to this heading">¶</a></h1>
+<p>Light weight OS-agnostic volume controller for python</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>volume-control
+</pre></div>
+</div>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyvolume</span> <span class="kn">import</span> <span class="n">pyvolume</span>
+
+<span class="n">pyvolume</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="optional-arguments">
+<h2>Optional arguments<a class="headerlink" href="#optional-arguments" title="Permalink to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>debug:</strong> Display logs in the form of <code class="docutils literal notranslate"><span class="pre">info</span></code>, <code class="docutils literal notranslate"><span class="pre">warnings</span></code> and <code class="docutils literal notranslate"><span class="pre">errors</span></code> messages.</p></li>
+<li><p><strong>logger:</strong> Bring your own <a class="reference external" href="https://docs.python.org/3/library/logging.html#logging.Logger"><code class="docutils literal notranslate"><span class="pre">Logger</span></code></a> for custom logging.</p></li>
+</ul>
+</section>
+<section id="coding-standards">
+<h2>Coding Standards<a class="headerlink" href="#coding-standards" title="Permalink to this heading">¶</a></h2>
+<p>Docstring format: <a class="reference external" href="https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings"><code class="docutils literal notranslate"><span class="pre">Google</span></code></a> <br>
+Styling conventions: <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/"><code class="docutils literal notranslate"><span class="pre">PEP</span> <span class="pre">8</span></code></a> <br>
+Clean code with pre-commit hooks: <a class="reference external" href="https://flake8.pycqa.org/en/latest/"><code class="docutils literal notranslate"><span class="pre">flake8</span></code></a> and
+<a class="reference external" href="https://pycqa.github.io/isort/"><code class="docutils literal notranslate"><span class="pre">isort</span></code></a></p>
+</section>
+<section id="release-notes">
+<h2><a class="reference external" href="https://github.com/thevickypedia/volume-control/blob/main/release_notes.rst">Release Notes</a><a class="headerlink" href="#release-notes" title="Permalink to this heading">¶</a></h2>
+<p><strong>Requirement</strong></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>changelog-generator
+</pre></div>
+</div>
+<p><strong>Usage</strong></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>changelog<span class="w"> </span>reverse<span class="w"> </span>-f<span class="w"> </span>release_notes.rst<span class="w"> </span>-t<span class="w"> </span><span class="s1">&#39;Release Notes&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="linting">
+<h2>Linting<a class="headerlink" href="#linting" title="Permalink to this heading">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">PreCommit</span></code> will ensure linting, and the doc creation are run on every commit.</p>
+<p><strong>Requirement</strong></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">sphinx</span><span class="o">==</span><span class="m">5</span>.1.1<span class="w"> </span>pre-commit<span class="w"> </span>recommonmark
+</pre></div>
+</div>
+<p><strong>Usage</strong></p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>pre-commit<span class="w"> </span>run<span class="w"> </span>--all-files
+</pre></div>
+</div>
+</section>
+<section id="pypi-package">
+<h2>Pypi Package<a class="headerlink" href="#pypi-package" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference external" href="https://packaging.python.org/tutorials/packaging-projects/"><img alt="pypi-module" src="https://img.shields.io/badge/Software%20Repository-pypi-1f425f.svg" /></a></p>
+<p><a class="reference external" href="https://pypi.org/project/volume-control/">https://pypi.org/project/volume-control/</a></p>
+</section>
+<section id="runbook">
+<h2>Runbook<a class="headerlink" href="#runbook" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference external" href="https://www.sphinx-doc.org/en/master/man/sphinx-autogen.html"><img alt="made-with-sphinx-doc" src="https://img.shields.io/badge/Code%20Docs-Sphinx-1f425f.svg" /></a></p>
+<p><a class="reference external" href="https://thevickypedia.github.io/volume-control/">https://thevickypedia.github.io/volume-control/</a></p>
+</section>
+<section id="license-copyright">
+<h2>License &amp; copyright<a class="headerlink" href="#license-copyright" title="Permalink to this heading">¶</a></h2>
+<p>© Vignesh Rao</p>
+<p>Licensed under the <a class="reference external" href="https://github.com/thevickypedia/volume-control/blob/main/LICENSE">MIT License</a></p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Volume Control</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#optional-arguments">Optional arguments</a></li>
+<li><a class="reference internal" href="#coding-standards">Coding Standards</a></li>
+<li><a class="reference internal" href="#release-notes">Release Notes</a></li>
+<li><a class="reference internal" href="#linting">Linting</a></li>
+<li><a class="reference internal" href="#pypi-package">Pypi Package</a></li>
+<li><a class="reference internal" href="#runbook">Runbook</a></li>
+<li><a class="reference internal" href="#license-copyright">License &amp; copyright</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">Welcome to Volume Control’s documentation!</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/README.md.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Volume Control’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Volume Control  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Volume Control</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2023, Vignesh Rao.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.1.1.
+    </div>
+  </body>
+</html>

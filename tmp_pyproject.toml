@@ -1,0 +1,41 @@
+[project]
+name = "pynotification"
+dynamic = ["version"]
+description = "Python module to trigger OS-agnostic system notifications"
+readme = "README.md"
+authors = [{ name = "Vignesh Sivanandha Rao", email = "svignesh1793@gmail.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Development Status :: 5 - Production/Stable",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Terminals :: Terminal Emulators/X Terminals"
+]
+keywords = ["system", "notification"]
+requires-python = ">=3"
+dependencies = [
+    "pywin32; platform_system=='Windows'"
+]
+
+[tool.setuptools]
+packages = ["pynotification"]
+
+[tool.setuptools.dynamic]
+version = {attr = "pynotification.version"}
+
+[build-system]
+requires      = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+dev = ["pytest", "pre-commit"]
+
+[project.urls]
+Homepage = "https://github.com/thevickypedia/pynotification"
+Docs = "https://thevickypedia.github.io/pynotification/"
+Source = "https://github.com/thevickypedia/pynotification"
+"Bug Tracker" = "https://github.com/thevickypedia/pynotification/issues"
+"Release Notes" = "https://github.com/thevickypedia/pynotification/blob/main/release_notes.rst"
