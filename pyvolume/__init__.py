@@ -2,4 +2,4 @@
 
 from .pyvolume import pyvolume  # noqa: F401
 
-version = "0.0.7"
+version = "0.7"
