@@ -6,7 +6,6 @@
 """
 
 import ctypes
-from typing import NoReturn
 
 VK_VOLUME_MUTE = 0xAD
 VK_VOLUME_DOWN = 0xAE
@@ -87,7 +86,7 @@ class Input(ctypes.Structure):
     ]
 
 
-def key_down(key_code: int) -> NoReturn:
+def key_down(key_code: int) -> None:
     """Function for key down.
 
     Args:
@@ -100,7 +99,7 @@ def key_down(key_code: int) -> NoReturn:
     ctypes.windll.user32.SendInput(1, ctypes.pointer(x), ctypes.sizeof(x))
 
 
-def key_up(key_code: int) -> NoReturn:
+def key_up(key_code: int) -> None:
     """Function for key up.
 
     Args:
@@ -113,7 +112,7 @@ def key_up(key_code: int) -> NoReturn:
     ctypes.windll.user32.SendInput(1, ctypes.pointer(x), ctypes.sizeof(x))
 
 
-def key(key_code: int) -> NoReturn:
+def key(key_code: int) -> None:
     """Operator for the key function with time interval.
 
     Args:
@@ -123,22 +122,22 @@ def key(key_code: int) -> NoReturn:
     key_up(key_code)
 
 
-def volume_up() -> NoReturn:
+def volume_up() -> None:
     """Controller for increase volume."""
     key(VK_VOLUME_UP)
 
 
-def volume_down() -> NoReturn:
+def volume_down() -> None:
     """Controller for decrease volume."""
     key(VK_VOLUME_DOWN)
 
 
-def mute() -> NoReturn:
+def mute() -> None:
     """Controller for mute."""
     key(VK_VOLUME_MUTE)
 
 
-def set_volume(level: int) -> NoReturn:
+def set_volume(level: int) -> None:
     """Set volume to a custom level.
 
     Args:

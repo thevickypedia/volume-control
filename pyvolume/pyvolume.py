@@ -4,7 +4,6 @@ import logging
 import math
 import os
 import platform
-from typing import NoReturn
 
 from . import mod
 
@@ -29,7 +28,7 @@ def default_logger() -> logging.Logger:
     return logger
 
 
-def pyvolume(level: int, debug: bool = False, logger: logging.Logger = None) -> NoReturn:
+def pyvolume(level: int, debug: bool = False, logger: logging.Logger = None) -> None:
     """Set system volume to a certain level.
 
     Args:
