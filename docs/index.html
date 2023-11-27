@@ -66,28 +66,37 @@
 <span id="pyvolume"></span><h1>PyVolume<a class="headerlink" href="#module-pyvolume.pyvolume" title="Permalink to this heading">¶</a></h1>
 <p>OS-agnostic module to control system volume using built-in functions.</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="pyvolume.pyvolume.default_logger">
-<span class="sig-prename descclassname"><span class="pre">pyvolume.pyvolume.</span></span><span class="sig-name descname"><span class="pre">default_logger</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Logger</span></span></span><a class="headerlink" href="#pyvolume.pyvolume.default_logger" title="Permalink to this definition">¶</a></dt>
-<dd><p>Configure default logger.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Returns the <code class="docutils literal notranslate"><span class="pre">Logger</span></code> object as an argument.</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p>Logger</p>
-</dd>
-</dl>
+<dt class="sig sig-object py" id="pyvolume.pyvolume.log">
+<span class="sig-prename descclassname"><span class="pre">pyvolume.pyvolume.</span></span><span class="sig-name descname"><span class="pre">log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvolume.pyvolume.log" title="Permalink to this definition">¶</a></dt>
+<dd><p>Log messages if logger is set.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyvolume.pyvolume.increase">
+<span class="sig-prename descclassname"><span class="pre">pyvolume.pyvolume.</span></span><span class="sig-name descname"><span class="pre">increase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Logger</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvolume.pyvolume.increase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the system volume to maximum.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyvolume.pyvolume.decrease">
+<span class="sig-prename descclassname"><span class="pre">pyvolume.pyvolume.</span></span><span class="sig-name descname"><span class="pre">decrease</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Logger</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyvolume.pyvolume.decrease" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mutes the system volume.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyvolume.pyvolume.pyvolume">
 <span class="sig-prename descclassname"><span class="pre">pyvolume.pyvolume.</span></span><span class="sig-name descname"><span class="pre">pyvolume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Logger</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyvolume.pyvolume.pyvolume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Legacy function.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyvolume.pyvolume.custom">
+<span class="sig-prename descclassname"><span class="pre">pyvolume.pyvolume.</span></span><span class="sig-name descname"><span class="pre">custom</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">percent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Logger</span><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyvolume.pyvolume.custom" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set system volume to a certain level.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>level</strong> – Volume level in percentage. 0 for mute and 100 for max volume.</p></li>
-<li><p><strong>debug</strong> – Boolean value to show output logs.</p></li>
+<li><p><strong>percent</strong> – Volume level in percentage.</p></li>
 <li><p><strong>logger</strong> – Bring your own logger for custom logging.</p></li>
 </ul>
 </dd>
@@ -108,199 +117,222 @@
 </dd></dl>
 
 </section>
-<section id="module-pyvolume.mod">
-<span id="module"></span><h1>Module<a class="headerlink" href="#module-pyvolume.mod" title="Permalink to this heading">¶</a></h1>
+<section id="module-pyvolume.module">
+<span id="module"></span><h1>Module<a class="headerlink" href="#module-pyvolume.module" title="Permalink to this heading">¶</a></h1>
+<p>Module to store shared object and validate host machine’s operating system.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyvolume.module.Settings">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyvolume.module.</span></span><span class="sig-name descname"><span class="pre">Settings</span></span><a class="headerlink" href="#pyvolume.module.Settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for settings.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Settings</span>
+</pre></div>
+</div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyvolume.module.Settings.os">
+<span class="sig-name descname"><span class="pre">os</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'Darwin'</span></em><a class="headerlink" href="#pyvolume.module.Settings.os" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pyvolume.module.Settings.logger">
+<span class="sig-name descname"><span class="pre">logger</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Logger</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pyvolume.module.Settings.logger" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-pyvolume.windows">
+<span id="windows"></span><h1>Windows<a class="headerlink" href="#module-pyvolume.windows" title="Permalink to this heading">¶</a></h1>
 <p>Module to change volume in WindowsOS, using windows binaries.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">WindowsVolume</span>
 </pre></div>
 </div>
 <dl class="py class">
-<dt class="sig sig-object py" id="pyvolume.mod.KeyBoardInput">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyvolume.mod.</span></span><span class="sig-name descname"><span class="pre">KeyBoardInput</span></span><a class="headerlink" href="#pyvolume.mod.KeyBoardInput" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.KeyBoardInput">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyvolume.windows.</span></span><span class="sig-name descname"><span class="pre">KeyBoardInput</span></span><a class="headerlink" href="#pyvolume.windows.KeyBoardInput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Inherits <code class="docutils literal notranslate"><span class="pre">Structure</span></code> from <code class="docutils literal notranslate"><span class="pre">ctypes</span></code> for operations using keyboard.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">KeyBoardInput</span>
 </pre></div>
 </div>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.KeyBoardInput._fields_">
-<span class="sig-name descname"><span class="pre">_fields_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('wVk',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_ushort'&gt;),</span> <span class="pre">('wScan',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_ushort'&gt;),</span> <span class="pre">('dwFlags',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_ulong'&gt;),</span> <span class="pre">('time',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_ulong'&gt;),</span> <span class="pre">('dwExtraInfo',</span> <span class="pre">&lt;class</span> <span class="pre">'pyvolume.mod.LP_c_ulong'&gt;)]</span></em><a class="headerlink" href="#pyvolume.mod.KeyBoardInput._fields_" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.KeyBoardInput._fields_">
+<span class="sig-name descname"><span class="pre">_fields_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('wVk',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_ushort'&gt;),</span> <span class="pre">('wScan',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_ushort'&gt;),</span> <span class="pre">('dwFlags',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_ulong'&gt;),</span> <span class="pre">('time',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_ulong'&gt;),</span> <span class="pre">('dwExtraInfo',</span> <span class="pre">&lt;class</span> <span class="pre">'pyvolume.windows.LP_c_ulong'&gt;)]</span></em><a class="headerlink" href="#pyvolume.windows.KeyBoardInput._fields_" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.KeyBoardInput.dwExtraInfo">
-<span class="sig-name descname"><span class="pre">dwExtraInfo</span></span><a class="headerlink" href="#pyvolume.mod.KeyBoardInput.dwExtraInfo" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.KeyBoardInput.dwExtraInfo">
+<span class="sig-name descname"><span class="pre">dwExtraInfo</span></span><a class="headerlink" href="#pyvolume.windows.KeyBoardInput.dwExtraInfo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure/Union member</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.KeyBoardInput.dwFlags">
-<span class="sig-name descname"><span class="pre">dwFlags</span></span><a class="headerlink" href="#pyvolume.mod.KeyBoardInput.dwFlags" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.KeyBoardInput.dwFlags">
+<span class="sig-name descname"><span class="pre">dwFlags</span></span><a class="headerlink" href="#pyvolume.windows.KeyBoardInput.dwFlags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure/Union member</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.KeyBoardInput.time">
-<span class="sig-name descname"><span class="pre">time</span></span><a class="headerlink" href="#pyvolume.mod.KeyBoardInput.time" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.KeyBoardInput.time">
+<span class="sig-name descname"><span class="pre">time</span></span><a class="headerlink" href="#pyvolume.windows.KeyBoardInput.time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure/Union member</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.KeyBoardInput.wScan">
-<span class="sig-name descname"><span class="pre">wScan</span></span><a class="headerlink" href="#pyvolume.mod.KeyBoardInput.wScan" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.KeyBoardInput.wScan">
+<span class="sig-name descname"><span class="pre">wScan</span></span><a class="headerlink" href="#pyvolume.windows.KeyBoardInput.wScan" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure/Union member</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.KeyBoardInput.wVk">
-<span class="sig-name descname"><span class="pre">wVk</span></span><a class="headerlink" href="#pyvolume.mod.KeyBoardInput.wVk" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.KeyBoardInput.wVk">
+<span class="sig-name descname"><span class="pre">wVk</span></span><a class="headerlink" href="#pyvolume.windows.KeyBoardInput.wVk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure/Union member</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pyvolume.mod.HardwareInput">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyvolume.mod.</span></span><span class="sig-name descname"><span class="pre">HardwareInput</span></span><a class="headerlink" href="#pyvolume.mod.HardwareInput" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.HardwareInput">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyvolume.windows.</span></span><span class="sig-name descname"><span class="pre">HardwareInput</span></span><a class="headerlink" href="#pyvolume.windows.HardwareInput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Inherits <code class="docutils literal notranslate"><span class="pre">Structure</span></code> from <code class="docutils literal notranslate"><span class="pre">ctypes</span></code> for operations using external hardware.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">HardwareInput</span>
 </pre></div>
 </div>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.HardwareInput._fields_">
-<span class="sig-name descname"><span class="pre">_fields_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('uMsg',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_ulong'&gt;),</span> <span class="pre">('wParamL',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_short'&gt;),</span> <span class="pre">('wParamH',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_ushort'&gt;)]</span></em><a class="headerlink" href="#pyvolume.mod.HardwareInput._fields_" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.HardwareInput._fields_">
+<span class="sig-name descname"><span class="pre">_fields_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('uMsg',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_ulong'&gt;),</span> <span class="pre">('wParamL',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_short'&gt;),</span> <span class="pre">('wParamH',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_ushort'&gt;)]</span></em><a class="headerlink" href="#pyvolume.windows.HardwareInput._fields_" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.HardwareInput.uMsg">
-<span class="sig-name descname"><span class="pre">uMsg</span></span><a class="headerlink" href="#pyvolume.mod.HardwareInput.uMsg" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.HardwareInput.uMsg">
+<span class="sig-name descname"><span class="pre">uMsg</span></span><a class="headerlink" href="#pyvolume.windows.HardwareInput.uMsg" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure/Union member</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.HardwareInput.wParamH">
-<span class="sig-name descname"><span class="pre">wParamH</span></span><a class="headerlink" href="#pyvolume.mod.HardwareInput.wParamH" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.HardwareInput.wParamH">
+<span class="sig-name descname"><span class="pre">wParamH</span></span><a class="headerlink" href="#pyvolume.windows.HardwareInput.wParamH" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure/Union member</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.HardwareInput.wParamL">
-<span class="sig-name descname"><span class="pre">wParamL</span></span><a class="headerlink" href="#pyvolume.mod.HardwareInput.wParamL" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.HardwareInput.wParamL">
+<span class="sig-name descname"><span class="pre">wParamL</span></span><a class="headerlink" href="#pyvolume.windows.HardwareInput.wParamL" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure/Union member</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pyvolume.mod.MouseInput">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyvolume.mod.</span></span><span class="sig-name descname"><span class="pre">MouseInput</span></span><a class="headerlink" href="#pyvolume.mod.MouseInput" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.MouseInput">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyvolume.windows.</span></span><span class="sig-name descname"><span class="pre">MouseInput</span></span><a class="headerlink" href="#pyvolume.windows.MouseInput" title="Permalink to this definition">¶</a></dt>
 <dd><p>Inherits <code class="docutils literal notranslate"><span class="pre">Structure</span></code> from <code class="docutils literal notranslate"><span class="pre">ctypes</span></code> for operations using a mouse.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MouseInput</span>
 </pre></div>
 </div>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.MouseInput._fields_">
-<span class="sig-name descname"><span class="pre">_fields_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('dx',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_long'&gt;),</span> <span class="pre">('dy',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_long'&gt;),</span> <span class="pre">('mouseData',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_ulong'&gt;),</span> <span class="pre">('dwFlags',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_ulong'&gt;),</span> <span class="pre">('time',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_ulong'&gt;),</span> <span class="pre">('dwExtraInfo',</span> <span class="pre">&lt;class</span> <span class="pre">'pyvolume.mod.LP_c_ulong'&gt;)]</span></em><a class="headerlink" href="#pyvolume.mod.MouseInput._fields_" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.MouseInput._fields_">
+<span class="sig-name descname"><span class="pre">_fields_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('dx',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_long'&gt;),</span> <span class="pre">('dy',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_long'&gt;),</span> <span class="pre">('mouseData',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_ulong'&gt;),</span> <span class="pre">('dwFlags',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_ulong'&gt;),</span> <span class="pre">('time',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_ulong'&gt;),</span> <span class="pre">('dwExtraInfo',</span> <span class="pre">&lt;class</span> <span class="pre">'pyvolume.windows.LP_c_ulong'&gt;)]</span></em><a class="headerlink" href="#pyvolume.windows.MouseInput._fields_" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.MouseInput.dwExtraInfo">
-<span class="sig-name descname"><span class="pre">dwExtraInfo</span></span><a class="headerlink" href="#pyvolume.mod.MouseInput.dwExtraInfo" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.MouseInput.dwExtraInfo">
+<span class="sig-name descname"><span class="pre">dwExtraInfo</span></span><a class="headerlink" href="#pyvolume.windows.MouseInput.dwExtraInfo" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure/Union member</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.MouseInput.dwFlags">
-<span class="sig-name descname"><span class="pre">dwFlags</span></span><a class="headerlink" href="#pyvolume.mod.MouseInput.dwFlags" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.MouseInput.dwFlags">
+<span class="sig-name descname"><span class="pre">dwFlags</span></span><a class="headerlink" href="#pyvolume.windows.MouseInput.dwFlags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure/Union member</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.MouseInput.dx">
-<span class="sig-name descname"><span class="pre">dx</span></span><a class="headerlink" href="#pyvolume.mod.MouseInput.dx" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.MouseInput.dx">
+<span class="sig-name descname"><span class="pre">dx</span></span><a class="headerlink" href="#pyvolume.windows.MouseInput.dx" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure/Union member</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.MouseInput.dy">
-<span class="sig-name descname"><span class="pre">dy</span></span><a class="headerlink" href="#pyvolume.mod.MouseInput.dy" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.MouseInput.dy">
+<span class="sig-name descname"><span class="pre">dy</span></span><a class="headerlink" href="#pyvolume.windows.MouseInput.dy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure/Union member</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.MouseInput.mouseData">
-<span class="sig-name descname"><span class="pre">mouseData</span></span><a class="headerlink" href="#pyvolume.mod.MouseInput.mouseData" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.MouseInput.mouseData">
+<span class="sig-name descname"><span class="pre">mouseData</span></span><a class="headerlink" href="#pyvolume.windows.MouseInput.mouseData" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure/Union member</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.MouseInput.time">
-<span class="sig-name descname"><span class="pre">time</span></span><a class="headerlink" href="#pyvolume.mod.MouseInput.time" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.MouseInput.time">
+<span class="sig-name descname"><span class="pre">time</span></span><a class="headerlink" href="#pyvolume.windows.MouseInput.time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure/Union member</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pyvolume.mod.InputI">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyvolume.mod.</span></span><span class="sig-name descname"><span class="pre">InputI</span></span><a class="headerlink" href="#pyvolume.mod.InputI" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.InputI">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyvolume.windows.</span></span><span class="sig-name descname"><span class="pre">InputI</span></span><a class="headerlink" href="#pyvolume.windows.InputI" title="Permalink to this definition">¶</a></dt>
 <dd><p>Inherits <code class="docutils literal notranslate"><span class="pre">Union</span></code> from <code class="docutils literal notranslate"><span class="pre">ctypes</span></code> for input operations.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MouseInput</span>
 </pre></div>
 </div>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.InputI._fields_">
-<span class="sig-name descname"><span class="pre">_fields_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('ki',</span> <span class="pre">&lt;class</span> <span class="pre">'pyvolume.mod.KeyBoardInput'&gt;),</span> <span class="pre">('mi',</span> <span class="pre">&lt;class</span> <span class="pre">'pyvolume.mod.MouseInput'&gt;),</span> <span class="pre">('hi',</span> <span class="pre">&lt;class</span> <span class="pre">'pyvolume.mod.HardwareInput'&gt;)]</span></em><a class="headerlink" href="#pyvolume.mod.InputI._fields_" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.InputI._fields_">
+<span class="sig-name descname"><span class="pre">_fields_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('ki',</span> <span class="pre">&lt;class</span> <span class="pre">'pyvolume.windows.KeyBoardInput'&gt;),</span> <span class="pre">('mi',</span> <span class="pre">&lt;class</span> <span class="pre">'pyvolume.windows.MouseInput'&gt;),</span> <span class="pre">('hi',</span> <span class="pre">&lt;class</span> <span class="pre">'pyvolume.windows.HardwareInput'&gt;)]</span></em><a class="headerlink" href="#pyvolume.windows.InputI._fields_" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.InputI.hi">
-<span class="sig-name descname"><span class="pre">hi</span></span><a class="headerlink" href="#pyvolume.mod.InputI.hi" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.InputI.hi">
+<span class="sig-name descname"><span class="pre">hi</span></span><a class="headerlink" href="#pyvolume.windows.InputI.hi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure/Union member</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.InputI.ki">
-<span class="sig-name descname"><span class="pre">ki</span></span><a class="headerlink" href="#pyvolume.mod.InputI.ki" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.InputI.ki">
+<span class="sig-name descname"><span class="pre">ki</span></span><a class="headerlink" href="#pyvolume.windows.InputI.ki" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure/Union member</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.InputI.mi">
-<span class="sig-name descname"><span class="pre">mi</span></span><a class="headerlink" href="#pyvolume.mod.InputI.mi" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.InputI.mi">
+<span class="sig-name descname"><span class="pre">mi</span></span><a class="headerlink" href="#pyvolume.windows.InputI.mi" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure/Union member</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="pyvolume.mod.Input">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyvolume.mod.</span></span><span class="sig-name descname"><span class="pre">Input</span></span><a class="headerlink" href="#pyvolume.mod.Input" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.Input">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyvolume.windows.</span></span><span class="sig-name descname"><span class="pre">Input</span></span><a class="headerlink" href="#pyvolume.windows.Input" title="Permalink to this definition">¶</a></dt>
 <dd><p>Inherits <code class="docutils literal notranslate"><span class="pre">Structure</span></code> from <code class="docutils literal notranslate"><span class="pre">ctypes</span></code> to set type fields.</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">MouseInput</span>
 </pre></div>
 </div>
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.Input._fields_">
-<span class="sig-name descname"><span class="pre">_fields_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('type',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_ulong'&gt;),</span> <span class="pre">('ii',</span> <span class="pre">&lt;class</span> <span class="pre">'pyvolume.mod.InputI'&gt;)]</span></em><a class="headerlink" href="#pyvolume.mod.Input._fields_" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.Input._fields_">
+<span class="sig-name descname"><span class="pre">_fields_</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[('type',</span> <span class="pre">&lt;class</span> <span class="pre">'ctypes.c_ulong'&gt;),</span> <span class="pre">('ii',</span> <span class="pre">&lt;class</span> <span class="pre">'pyvolume.windows.InputI'&gt;)]</span></em><a class="headerlink" href="#pyvolume.windows.Input._fields_" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.Input.ii">
-<span class="sig-name descname"><span class="pre">ii</span></span><a class="headerlink" href="#pyvolume.mod.Input.ii" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.Input.ii">
+<span class="sig-name descname"><span class="pre">ii</span></span><a class="headerlink" href="#pyvolume.windows.Input.ii" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure/Union member</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="pyvolume.mod.Input.type">
-<span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#pyvolume.mod.Input.type" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.Input.type">
+<span class="sig-name descname"><span class="pre">type</span></span><a class="headerlink" href="#pyvolume.windows.Input.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Structure/Union member</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pyvolume.mod.key_down">
-<span class="sig-prename descclassname"><span class="pre">pyvolume.mod.</span></span><span class="sig-name descname"><span class="pre">key_down</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyvolume.mod.key_down" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.key_down">
+<span class="sig-prename descclassname"><span class="pre">pyvolume.windows.</span></span><span class="sig-name descname"><span class="pre">key_down</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyvolume.windows.key_down" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function for key down.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -310,8 +342,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pyvolume.mod.key_up">
-<span class="sig-prename descclassname"><span class="pre">pyvolume.mod.</span></span><span class="sig-name descname"><span class="pre">key_up</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyvolume.mod.key_up" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.key_up">
+<span class="sig-prename descclassname"><span class="pre">pyvolume.windows.</span></span><span class="sig-name descname"><span class="pre">key_up</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyvolume.windows.key_up" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function for key up.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -321,8 +353,8 @@
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pyvolume.mod.key">
-<span class="sig-prename descclassname"><span class="pre">pyvolume.mod.</span></span><span class="sig-name descname"><span class="pre">key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyvolume.mod.key" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.key">
+<span class="sig-prename descclassname"><span class="pre">pyvolume.windows.</span></span><span class="sig-name descname"><span class="pre">key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">key_code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyvolume.windows.key" title="Permalink to this definition">¶</a></dt>
 <dd><p>Operator for the key function with time interval.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -332,26 +364,26 @@
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pyvolume.mod.volume_up">
-<span class="sig-prename descclassname"><span class="pre">pyvolume.mod.</span></span><span class="sig-name descname"><span class="pre">volume_up</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyvolume.mod.volume_up" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.volume_up">
+<span class="sig-prename descclassname"><span class="pre">pyvolume.windows.</span></span><span class="sig-name descname"><span class="pre">volume_up</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyvolume.windows.volume_up" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controller for increase volume.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pyvolume.mod.volume_down">
-<span class="sig-prename descclassname"><span class="pre">pyvolume.mod.</span></span><span class="sig-name descname"><span class="pre">volume_down</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyvolume.mod.volume_down" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.volume_down">
+<span class="sig-prename descclassname"><span class="pre">pyvolume.windows.</span></span><span class="sig-name descname"><span class="pre">volume_down</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyvolume.windows.volume_down" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controller for decrease volume.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pyvolume.mod.mute">
-<span class="sig-prename descclassname"><span class="pre">pyvolume.mod.</span></span><span class="sig-name descname"><span class="pre">mute</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyvolume.mod.mute" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.mute">
+<span class="sig-prename descclassname"><span class="pre">pyvolume.windows.</span></span><span class="sig-name descname"><span class="pre">mute</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyvolume.windows.mute" title="Permalink to this definition">¶</a></dt>
 <dd><p>Controller for mute.</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pyvolume.mod.set_volume">
-<span class="sig-prename descclassname"><span class="pre">pyvolume.mod.</span></span><span class="sig-name descname"><span class="pre">set_volume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyvolume.mod.set_volume" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="pyvolume.windows.set_volume">
+<span class="sig-prename descclassname"><span class="pre">pyvolume.windows.</span></span><span class="sig-name descname"><span class="pre">set_volume</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#pyvolume.windows.set_volume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set volume to a custom level.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -382,7 +414,8 @@
     <ul>
 <li><a class="reference internal" href="#">Welcome to Volume Control’s documentation!</a></li>
 <li><a class="reference internal" href="#module-pyvolume.pyvolume">PyVolume</a></li>
-<li><a class="reference internal" href="#module-pyvolume.mod">Module</a></li>
+<li><a class="reference internal" href="#module-pyvolume.module">Module</a></li>
+<li><a class="reference internal" href="#module-pyvolume.windows">Windows</a></li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
 </ul>
 

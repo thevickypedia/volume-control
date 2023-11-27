@@ -1,39 +1,44 @@
 """OS-agnostic module to control system volume using built-in functions."""
 
 import logging
-import math
 import os
-import platform
+import warnings
 
-from . import mod
-
-_SYSTEM = platform.system()
-
-
-def default_logger() -> logging.Logger:
-    """Configure default logger.
-
-    Returns:
-        Logger:
-        Returns the ``Logger`` object as an argument.
-    """
-    handler = logging.StreamHandler()
-    handler.setFormatter(fmt=logging.Formatter(
-        datefmt='%b-%d-%Y %I:%M:%S %p',
-        fmt='%(asctime)s - %(levelname)s - [%(module)s:%(lineno)d] - %(funcName)s - %(message)s')
-    )
-    logger = logging.getLogger(__name__)
-    logger.setLevel(level=logging.DEBUG)
-    logger.addHandler(hdlr=handler)
-    return logger
+from . import windows
+from .module import settings
 
 
+def log(msg: str):
+    """Log messages if logger is set."""
+    if settings.logger:
+        settings.logger.error(msg)
+
+
+def increase(logger: logging.Logger = None):
+    """Sets the system volume to maximum."""
+    settings.logger = logger
+    custom(100)
+
+
+def decrease(logger: logging.Logger = None):
+    """Mutes the system volume."""
+    settings.logger = logger
+    custom(0)
+
+
+# noinspection PyUnusedLocal
 def pyvolume(level: int, debug: bool = False, logger: logging.Logger = None) -> None:
+    """Legacy function."""
+    warnings.warn('`pyvolume` function and `debug` flag are deprecated, please use `custom` instead',
+                  DeprecationWarning, 2)
+    custom(level, logger)
+
+
+def custom(percent: int, logger: logging.Logger = None) -> None:
     """Set system volume to a certain level.
 
     Args:
-        level: Volume level in percentage. 0 for mute and 100 for max volume.
-        debug: Boolean value to show output logs.
+        percent: Volume level in percentage.
         logger: Bring your own logger for custom logging.
 
     Notes:
@@ -43,39 +48,18 @@ def pyvolume(level: int, debug: bool = False, logger: logging.Logger = None) -> 
             - key combinations for volume controls in Windows.
         - ``amixer`` is a command-line mixer for ALSA(Advanced Linux Sound Architecture) sound-card driver.
     """
-    if not logger:
-        logger = default_logger()
-    if level > 100:
-        # log warning without checking debug flag
-        logger.warning("'%d' bad value received. volume level cannot exceed 100, defaulting to 100" % level)
-        level = 100
-    if level < 0:
-        # log warning without checking debug flag
-        logger.warning("'%d' bad value received. volume level cannot be negative, defaulting to 0" % level)
-        level = 0
-    if _SYSTEM == "Darwin":
-        result = os.system('osascript -e "set Volume %d"' % math.ceil((8 * level) / 100))
-        if debug is False:
-            return
-        if result == 0:
-            logger.info("System volume has been set to %s%s" % (level, "%"))
-        else:
-            logger.error("Failed to set system volume. ErrorCode: %s%s" % (result, "%"))
-    elif _SYSTEM == "Windows":
+    settings.logger = logger
+    assert isinstance(percent, int) and 0 <= percent <= 100, "level should be an integer between 0 and 100"
+    if settings.operating_system == "Darwin":
+        result = os.system('osascript -e "set Volume %d"' % round((8 * percent) / 100))
+        if result != 0:
+            log(f"Failed to set system volume. ErrorCode: {result}")
+    elif settings.operating_system == "Windows":
         try:
-            mod.set_volume(level=level)
+            windows.set_volume(level=percent)
         except Exception as error:
-            logger.error(error.__str__()) if debug else None
-        else:
-            logger.info("System volume has been set to %s%s" % (level, "%")) if debug else None
-    elif _SYSTEM == "Linux":
-        result = os.system("amixer sset 'Master' %d%s /dev/null 2>&1" % (level, "%"))
-        if debug is False:
-            return
-        if result == 0:
-            logger.info("System volume has been set to %s%s" % (level, "%"))
-        else:
-            logger.error("Failed to set system volume. ErrorCode: %s%s" % (result, "%"))
-    else:
-        # log warning without checking debug flag
-        logger.warning("This module is not intended for '%s'" % _SYSTEM)
+            log(error.__str__())
+    elif settings.operating_system == "Linux":
+        result = os.system("amixer sset 'Master' %d%s /dev/null 2>&1" % (percent, "%"))
+        if result != 0:
+            log(f"Failed to set system volume. ErrorCode: {result}")

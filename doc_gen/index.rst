@@ -21,7 +21,13 @@ PyVolume
 
 Module
 ======
-.. automodule:: pyvolume.mod
+.. automodule:: pyvolume.module
+   :members:
+   :undoc-members:
+
+Windows
+=======
+.. automodule:: pyvolume.windows
    :members:
    :undoc-members:
 

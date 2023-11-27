@@ -17,9 +17,9 @@ python -m pip install volume-control
 
 ### Usage
 ```python
-from pyvolume import pyvolume
+import pyvolume
 
-pyvolume(level=30)
+pyvolume.custom(percent=30)
 ```
 
 ### Optional arguments
