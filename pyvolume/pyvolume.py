@@ -49,17 +49,17 @@ def custom(percent: int, logger: logging.Logger = None) -> None:
         - ``amixer`` is a command-line mixer for ALSA(Advanced Linux Sound Architecture) sound-card driver.
     """
     settings.logger = logger
-    assert isinstance(percent, int) and 0 <= percent <= 100, "level should be an integer between 0 and 100"
-    if settings.operating_system == "Darwin":
+    assert isinstance(percent, int) and 0 <= percent <= 100, "value should be an integer between 0 and 100"
+    if settings.os == "Darwin":
         result = os.system('osascript -e "set Volume %d"' % round((8 * percent) / 100))
         if result != 0:
             log(f"Failed to set system volume. ErrorCode: {result}")
-    elif settings.operating_system == "Windows":
+    elif settings.os == "Windows":
         try:
             windows.set_volume(level=percent)
         except Exception as error:
             log(error.__str__())
-    elif settings.operating_system == "Linux":
+    elif settings.os == "Linux":
         result = os.system("amixer sset 'Master' %d%s /dev/null 2>&1" % (percent, "%"))
         if result != 0:
             log(f"Failed to set system volume. ErrorCode: {result}")

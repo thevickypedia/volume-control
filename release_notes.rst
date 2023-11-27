@@ -1,8 +1,8 @@
 Release Notes
 =============
 
-v0.9 (11/27/2023)
------------------
+v0.9.2 (11/27/2023)
+-------------------
 - Includes new functions to increase or decrease volume
 - Deprecates ``pyvolume`` as function name
 - Minor improvements
