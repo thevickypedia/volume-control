@@ -1,6 +1,6 @@
 """Place holder for package."""
 
 # noinspection PyDeprecation
-from .pyvolume import custom, pyvolume  # noqa: F401
+from .pyvolume import custom, pyvolume, increase, decrease  # noqa: F401
 
-version = "0.9"
+version = "0.9.1"
